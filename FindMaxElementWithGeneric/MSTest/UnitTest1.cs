@@ -85,6 +85,41 @@ namespace MSTest
 
         }
 
+        [TestMethod]
+        public void MaxString_At1st_Position()
+        {
+            //AAA
+            //Arrange
+            string[] array = { "Alpha1", "Beta", "Delta" };
+            //Act
+            string result = Program.MaximumStringNumber(array[0], array[1], array[2]);
+            //Assert
+            Assert.AreEqual("Alpha1", result);
+        }
 
+        [TestMethod]
+        public void MaxString_At2nd_Position()
+        {
+            //AAA
+            //Arrange
+            string[] array = { "Alpha", "Beta22", "Delta" };
+            //Act
+            string result = Program.MaximumStringNumber(array[0], array[1], array[2]);
+            //Assert
+            Assert.AreEqual("Beta22", result);
+        }
+
+        [TestMethod]
+        public void MaxString_At3rd_Position()
+        {
+            //AAA
+            //Arrange
+            string[] array = { "Alpha", "Beta", "Delta3" };
+            //Act
+            string result = Program.MaximumStringNumber(array[0], array[1], array[2]);
+            //Assert
+            Assert.AreEqual("Delta3", result);
+
+        }
     }
 }
