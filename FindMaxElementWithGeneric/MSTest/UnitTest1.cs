@@ -46,6 +46,45 @@ namespace MSTest
 
         }
 
+        [TestMethod]
+        public void MaxDouble_At1st_Position()
+        {
+            //AAA
+            //Arrange
+            double[] array = { 50.2, 20.25, 10.1235 };
+            //Act
+            double result = Program.MaximumDoubleNumber(array[0], array[1], array[2]);
+            //Assert
+            Assert.AreEqual(50.2, result);
+
+        }
+
+        [TestMethod]
+        public void MaxDouble_At2nd_Position()
+        {
+            //AAA
+            //Arrange
+            double[] array = { 50.2, 200.25, 10.1235 };
+            //Act
+            double result = Program.MaximumDoubleNumber(array[0], array[1], array[2]);
+            //Assert
+            Assert.AreEqual(200.25, result);
+
+        }
+
+        [TestMethod]
+        public void MaxDouble_At3rd_Position()
+        {
+            //AAA
+            //Arrange
+            double[] array = { 50.2, 200.25, 1011.1235 };
+            //Act
+            double result = Program.MaximumDoubleNumber(array[0], array[1], array[2]);
+            //Assert
+            Assert.AreEqual(1011.1235, result);
+
+        }
+
 
     }
 }

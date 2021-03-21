@@ -20,7 +20,7 @@ namespace FindMaxElement
                 return first;
         }
 
-        public static double MaximumFloatNumber(double first, double second, double third)
+        public static double MaximumDoubleNumber(double first, double second, double third)
         {
             if (first > second && first > third)
                 return first;
@@ -40,7 +40,7 @@ namespace FindMaxElement
             Console.WriteLine("-----------------");
             double[] floatNumber = { 3.1, 22.5, 0.2 };
             Console.WriteLine("MAXIMUM DECIMAL");
-            Console.WriteLine(MaximumFloatNumber(floatNumber[0], floatNumber[1], floatNumber[2]));
+            Console.WriteLine(MaximumDoubleNumber(floatNumber[0], floatNumber[1], floatNumber[2]));
             Console.WriteLine("-----------------");
 
             Console.ReadKey();
