@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace FindMaxElement
 {
-    class Program
+    public class Program
     {
-        public static void MaximumIntegerNumber(int first, int second, int third)
+        public static int MaximumIntegerNumber(int first, int second, int third)
         {
             if (first > second && first > third)
-                Console.WriteLine(first);
+                return first;
             else if (second > first && second > third)
-                Console.WriteLine(second);
+                return second;
             else if (third > first && third > second)
-                Console.WriteLine(third);
+                return third ;
             else
-                Console.WriteLine(first);
-            Console.WriteLine("-----------------");
+                return first;
         }
 
         static void Main(string[] args)
         {
             int[] integer = { 3, 2, 0 };
             Console.WriteLine("MAXIMUM INTEGER");
-            MaximumIntegerNumber(integer[0], integer[1], integer[2]);
+            Console.WriteLine(MaximumIntegerNumber(integer[0], integer[1], integer[2]));
+            Console.WriteLine("-----------------");
             Console.ReadKey();
 
         }
