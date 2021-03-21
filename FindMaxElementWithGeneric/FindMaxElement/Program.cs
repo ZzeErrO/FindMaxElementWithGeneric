@@ -32,6 +32,18 @@ namespace FindMaxElement
                 return first;
         }
 
+        public static string MaximumStringNumber(string first, string second, string third)
+        {
+            if (first.Length > second.Length && first.Length > third.Length)
+                return first;
+            else if (second.Length > first.Length && second.Length > third.Length)
+                return second;
+            else if (third.Length > first.Length && third.Length > second.Length)
+                return third;
+            else
+                return first;
+        }
+
         static void Main(string[] args)
         {
             int[] integer = { 3, 2, 0 };
@@ -41,6 +53,10 @@ namespace FindMaxElement
             double[] floatNumber = { 3.1, 22.5, 0.2 };
             Console.WriteLine("MAXIMUM DECIMAL");
             Console.WriteLine(MaximumDoubleNumber(floatNumber[0], floatNumber[1], floatNumber[2]));
+            Console.WriteLine("-----------------");
+            string[] stringNumber = { "Apple", "Peach", "Banana" };
+            Console.WriteLine("MAXIMUM STRING");
+            Console.WriteLine(MaximumStringNumber(stringNumber[0], stringNumber[1], stringNumber[2]));
             Console.WriteLine("-----------------");
 
             Console.ReadKey();
