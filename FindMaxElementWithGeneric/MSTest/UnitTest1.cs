@@ -21,7 +21,7 @@ namespace MSTest
         }
 
         [TestMethod]
-        public void MaxInteger_At2st_Position()
+        public void MaxInteger_At2nd_Position()
         {
             //AAA
             //Arrange
@@ -33,6 +33,19 @@ namespace MSTest
 
         }
 
-     
+        [TestMethod]
+        public void MaxInteger_At3rd_Position()
+        {
+            //AAA
+            //Arrange
+            int[] array = { 5, 20, 100 };
+            //Act
+            int result = Program.MaximumIntegerNumber(array[0], array[1], array[2]);
+            //Assert
+            Assert.AreEqual(100, result);
+
+        }
+
+
     }
 }
