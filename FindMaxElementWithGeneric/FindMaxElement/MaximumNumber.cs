@@ -8,42 +8,22 @@ namespace FindMaxElement
 {
     public class MaximumNumber<T> where T : IComparable
     {
-        public T[] value;
-        public MaximumNumber(T[] value)
+        public static T MaxNum(T first, T second, T third)
         {
-            this.value = value;
-        }
-
-        public T[] Sort(T[] values)
-        {
-            Array.Sort(values);
-            return values;
-
-        }
-
-        void add(params int[] a)
-        {
-
-        }
-
-
-        public T MaxValue(params T[] values)
-        {
-            var sorted_values = Sort(values);
-
-            return sorted_values[sorted_values.Length - 1];
-        }
-
-        public T MaxMethod()
-        {
-            var max = MaxValue(this.value);
-            return max;
-        }
-
-        public void PrintMaxValue()
-        {
-            var max = MaxValue(this.value);
-            Console.WriteLine("Maximum value is " + max);
+            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0 ||
+                first.CompareTo(second) >= 0 && first.CompareTo(third) > 0 ||
+                first.CompareTo(second) > 0 && first.CompareTo(third) >= 0)
+                return first;
+            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0 ||
+                second.CompareTo(first) > 0 && second.CompareTo(third) > 0 ||
+                    second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
+                return second;
+            else if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0 ||
+                third.CompareTo(first) > 0 && third.CompareTo(second) > 0 ||
+                    third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
+                return third;
+            else
+                return first;
         }
     }
 
