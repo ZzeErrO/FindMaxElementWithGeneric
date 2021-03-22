@@ -12,12 +12,12 @@ namespace MSTest
         {
             //AAA
             //Arrange
+            //MaximumNumber<int> maximum = new MaximumNumber<int>();
             int[] array = { 5, 2, 1};
             //Act
-            int result = Program.MaximumIntegerNumber(array[0], array[1], array[2]);
+            int result = Program.MaxNum<int>( array[0], array[1], array[2] );
             //Assert
             Assert.AreEqual(5,result);
-            
         }
 
         [TestMethod]
@@ -27,7 +27,7 @@ namespace MSTest
             //Arrange
             int[] array = { 5, 20, 1 };
             //Act
-            int result = Program.MaximumIntegerNumber(array[0], array[1], array[2]);
+            int result = Program.MaxNum<int>(array[0], array[1], array[2]);
             //Assert
             Assert.AreEqual(20, result);
 
@@ -40,7 +40,7 @@ namespace MSTest
             //Arrange
             int[] array = { 5, 20, 100 };
             //Act
-            int result = Program.MaximumIntegerNumber(array[0], array[1], array[2]);
+            int result = Program.MaxNum<int>(array[0], array[1], array[2]);
             //Assert
             Assert.AreEqual(100, result);
 
@@ -53,7 +53,7 @@ namespace MSTest
             //Arrange
             double[] array = { 50.2, 20.25, 10.1235 };
             //Act
-            double result = Program.MaximumDoubleNumber(array[0], array[1], array[2]);
+            double result = Program.MaxNum<double>(array[0], array[1], array[2]);
             //Assert
             Assert.AreEqual(50.2, result);
 
@@ -66,7 +66,7 @@ namespace MSTest
             //Arrange
             double[] array = { 50.2, 200.25, 10.1235 };
             //Act
-            double result = Program.MaximumDoubleNumber(array[0], array[1], array[2]);
+            double result = Program.MaxNum<double>(array[0], array[1], array[2]);
             //Assert
             Assert.AreEqual(200.25, result);
 
@@ -79,7 +79,7 @@ namespace MSTest
             //Arrange
             double[] array = { 50.2, 200.25, 1011.1235 };
             //Act
-            double result = Program.MaximumDoubleNumber(array[0], array[1], array[2]);
+            double result = Program.MaxNum<double>(array[0], array[1], array[2]);
             //Assert
             Assert.AreEqual(1011.1235, result);
 
@@ -90,11 +90,11 @@ namespace MSTest
         {
             //AAA
             //Arrange
-            string[] array = { "Alpha1", "Beta", "Delta" };
+            string[] array = { "11", "2", "2" };
             //Act
-            string result = Program.MaximumStringNumber(array[0], array[1], array[2]);
+            string result = Program.MaxNum<string>(array[0], array[1], array[2]);
             //Assert
-            Assert.AreEqual("Alpha1", result);
+            Assert.AreEqual("11", result);
         }
 
         [TestMethod]
@@ -102,11 +102,11 @@ namespace MSTest
         {
             //AAA
             //Arrange
-            string[] array = { "Alpha", "Beta22", "Delta" };
+            string[] array = { "1", "22", "12" };
             //Act
-            string result = Program.MaximumStringNumber(array[0], array[1], array[2]);
+            string result = Program.MaxNum<string>(array[0], array[1], array[2]);
             //Assert
-            Assert.AreEqual("Beta22", result);
+            Assert.AreEqual("22", result);
         }
 
         [TestMethod]
@@ -114,11 +114,11 @@ namespace MSTest
         {
             //AAA
             //Arrange
-            string[] array = { "Alpha", "Beta", "Delta3" };
+            string[] array = { "10", "25", "30" };
             //Act
-            string result = Program.MaximumStringNumber(array[0], array[1], array[2]);
+            string result = Program.MaxNum<string>(array[0], array[1], array[2]);
             //Assert
-            Assert.AreEqual("Delta3", result);
+            Assert.AreEqual("30", result);
 
         }
     }
